@@ -184,7 +184,7 @@ export const websiteConfig = {
   // 服务器配置
   server: {
     displayAddress: "mm.rainplay.cn:58211",
-    apiAddress: "mm.rainplay.cn",
+    apiAddress: "ipv4.mm.rainplay.cn",
     port: "58211",
     version: "1.21.11",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java"
