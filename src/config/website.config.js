@@ -197,10 +197,10 @@ export const websiteConfig = {
   // 服务器配置
   server: {
     // 页面显示的服务器地址
-    displayAddress: "mm.rainplay.cn:58211",
+    displayAddress: "mm.rainplay.cn:45454",
     // API请求使用的服务器地址（可以不同）
     apiAddress: "ipv4.mm.rainplay.cn",
-    port: "58211",
+    port: "45454",
     version: "1.21.11",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java"
   },
