@@ -210,7 +210,7 @@ export const websiteConfig = {
     copyright: "© 2022-2026 JungleS服务器管理团队保留所有权利.",
     customHtml: `
       <!-- 在这里插入自定义HTML代码，比如备案信息 -->
-      <p style="text-align: center; color: #666; font-size: 14px; margin-top: 20px;">本站由雨云提供计算服务</p>
+      <p style="text-align:center;font-size:14px;color:#555;margin:15px 0;">本站由<a href="https://www.yucloud.top" target="_blank" style="color:#007bff;text-decoration:none;">雨云</a>提供计算服务</p>
     `
   },
 
