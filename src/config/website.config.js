@@ -352,7 +352,7 @@ export const websiteConfig = {
         ]
       },
       
-      // 管理团队板块
+      // 管理团队板块，关键修复：对象末尾追加英文逗号
       team: {
         enabled: true,
         title: "管理团队",
@@ -361,7 +361,7 @@ export const websiteConfig = {
           { label: "JungleX", value: "腐竹-物理服主！" },
           { label: "JungleB", value: "腐竹-不务正业" }
         ]
-      }
+      },
     },
     
     // 游戏规则配置
