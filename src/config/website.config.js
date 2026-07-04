@@ -1,6 +1,6 @@
-// 网站全局配置文件 JungleS Minecraft服务器官网
+// 网站配置文件
 export const websiteConfig = {
-  // 站点基础SEO信息
+  // 网站基本信息
   site: {
     title: "JungleS",
     description: "欢迎来到JungleS，探索无限可能的方块世界！",
@@ -9,7 +9,7 @@ export const websiteConfig = {
     language: "zh-CN"
   },
 
-  // 顶部导航栏配置
+  // 导航栏配置
   navigation: {
     items: [
       {
@@ -17,18 +17,22 @@ export const websiteConfig = {
         path: "/",
         icon: "mdi-home",
         enabled: true,
-        external: false,
-        externalUrl: "",
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效） //请填写完整的URL，例如：https://mc.wanfory.top,必须带协议头
+        // 页面标题配置
         pageTitle: {
+          // 主标题配置（支持打字机效果）
           mainTitle: {
-            texts: ["欢迎来到 JungleS服务器", "Welcome to JungleS"],
+            texts: ["欢迎来到 JungleS服务器", "Welcome to JungleS"], // 多语言标题数组
             typewriter: {
-              enabled: true,
-              speed: 100,
-              delay: 1000,
-              loop: true
+              enabled: true, // 是否启用打字机效果
+              speed: 100,    // 打字速度（毫秒）
+              delay: 1000,   // 切换延迟（毫秒）
+              loop: true     // 是否循环播放
             }
           },
+          // 副标题配置
           subtitle: "探索无限可能的方块世界，与朋友一起创造属于你们的冒险故事"
         }
       },
@@ -37,8 +41,9 @@ export const websiteConfig = {
         path: "/gallery",
         icon: "mdi-image",
         enabled: true,
-        external: false,
-        externalUrl: "",
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
             texts: ["游戏相册", "JungleS Game Gallery"],
@@ -49,7 +54,7 @@ export const websiteConfig = {
               loop: true
             }
           },
-          subtitle: "浏览服务器的精彩游戏截图和玩家建筑作品"
+          subtitle: "浏览服务器的精彩游戏截图和玩家作品"
         }
       },
       {
@@ -57,8 +62,9 @@ export const websiteConfig = {
         path: "/history",
         icon: "mdi-history",
         enabled: true,
-        external: false,
-        externalUrl: "",
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
             texts: ["JungleS服务器历程", "JungleS History"],
@@ -77,8 +83,9 @@ export const websiteConfig = {
         path: "/leaderboard",
         icon: "mdi-trophy",
         enabled: true,
-        external: false,
-        externalUrl: "",
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
             texts: ["玩家排行榜", "JungleS Leaderboard"],
@@ -89,7 +96,7 @@ export const websiteConfig = {
               loop: true
             }
           },
-          subtitle: "看看谁是最活跃的玩家，展示你的游戏成就"
+          subtitle: "看看谁是最活跃的玩家，展示你的成就"
         }
       },
       {
@@ -97,8 +104,9 @@ export const websiteConfig = {
         path: "/about",
         icon: "mdi-information",
         enabled: true,
-        external: false,
-        externalUrl: "",
+        // 外链配置：如果external为true，则点击跳转到externalUrl
+        external: false, // 是否启用外链模式
+        externalUrl: "", // 外链地址（仅在external为true时生效）
         pageTitle: {
           mainTitle: {
             texts: ["关于服务器", "About JungleS Server"],
@@ -109,16 +117,17 @@ export const websiteConfig = {
               loop: true
             }
           },
-          subtitle: "了解服务器配置、管理团队、游戏规则与加入方式"
+          subtitle: "了解我们的服务器信息、管理团队和游戏规则"
         }
       }
     ],
+    // 添加新页面时，只需在这里添加新的导航项即可
     autoHide: true,
-    hideThreshold: 100,
-    showThreshold: 50
+    hideThreshold: 100, // 向下滚动100px后隐藏导航栏
+    showThreshold: 50   // 向上滚动到距离顶部50px时显示导航栏
   },
 
-  // 页面轮播背景图配置
+  // 背景图片配置
   background: {
     images: [
       "/backgrounds/desktopWallpaper_1.webp",
@@ -132,85 +141,97 @@ export const websiteConfig = {
     defaultImage: "/backgrounds/default.webp"
   },
 
-  // 内置网易云音乐播放器配置
+  // 音乐播放器配置
   musicPlayer: {
     enabled: true,
     metingApi: "https://api.injahow.cn/meting/",
-    server: "netease",
-    type: "playlist",
-    id: "5186526688",
+    server: "netease", // netease, kugou
+    type: "playlist",   // playlist, song
+    id: "5186526688",      // 歌单ID
     autoPlay: false,
     volume: 0.8
   },
 
-  // 全局像素字体配置
+  // 字体配置
   fonts: {
+    // 主字体配置
     main: {
-      family: "像素体",
-      file: "/fonts/像素体.ttf",
-      fallback: "'Quicksand', 'Noto Sans SC', sans-serif",
-      weight: "normal"
+      family: "像素体", // 字体名称
+      file: "/fonts/像素体.ttf", // 字体文件路径
+      fallback: "'Quicksand', 'Noto Sans SC', sans-serif", // 备用字体
+      weight: "normal" // 字体粗细
     },
+    // 标题字体配置
     title: {
-      family: "像素体",
-      file: "/fonts/像素体.ttf",
-      fallback: "'Quicksand', 'Noto Sans SC', sans-serif",
-      weight: "normal"
+      family: "像素体", // 字体名称
+      file: "/fonts/像素体.ttf", // 字体文件路径
+      fallback: "'Quicksand', 'Noto Sans SC', sans-serif", // 备用字体
+      weight: "normal" // 字体粗细
     }
   },
 
-  // 明暗主题配色方案
+  // 主题配置
   theme: {
+    // 日间模式颜色
     light: {
-      primary: "#ff8eb7",
-      secondary: "#a6e3e9",
-      accent: "#ffd166",
-      background: "#f8f5ff",
+      primary: "#ff8eb7",     // 樱花粉
+      secondary: "#a6e3e9",   // 薄荷蓝
+      accent: "#ffd166",      // 奶油黄
+      background: "#f8f5ff",  // 浅紫色背景
       card: "rgba(255, 255, 255, 0.85)",
-      text: "#5a4b81",
+      text: "#5a4b81",       // 深紫色文字
       glass: "rgba(255, 255, 255, 0.35)"
     },
+    // 夜间模式颜色
     dark: {
-      primary: "#ff8eb7",
-      secondary: "#a6e3e9",
-      accent: "#ffd166",
-      background: "#1a1a2e",
+      primary: "#ff8eb7",     // 樱花粉
+      secondary: "#a6e3e9",   // 薄荷蓝
+      accent: "#ffd166",      // 奶油黄
+      background: "#1a1a2e",  // 深蓝背景
       card: "rgba(30, 30, 46, 0.85)",
-      text: "#cdd6f4",
+      text: "#cdd6f4",       // 浅色文字
       glass: "rgba(30, 30, 46, 0.35)"
     }
   },
 
-  // Minecraft服务器连接信息
+  // 服务器配置
   server: {
+    // 页面显示的服务器地址
     displayAddress: "mm.rainplay.cn:58211",
+    // API请求使用的服务器地址（可以不同）
     apiAddress: "ipv4.mm.rainplay.cn",
     port: "58211",
     version: "1.21.11",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java"
   },
 
-  // 页面底部版权信息
+  // 页脚配置
   footer: {
     copyright: "© 2022-2026 JungleS服务器管理团队保留所有权利.",
-    customHtml: ``
+    customHtml: `
+      <!-- 在这里插入自定义HTML代码，比如备案信息 -->
+    `
   },
 
-  // FZ生存数据包排行榜配置
+  // 排行榜配置
   leaderboard: {
+    // 本地JSON文件配置
     localFile: {
       path: "/assets/leaderboard/count_export.json",
-      cacheTimeout: 300000
+      cacheTimeout: 300000 // 5分钟缓存
     },
-
+    
+    // 计分板显示配置
     objectives: {
+      // 活跃时间
       "fzsd.module.scoreboard.display.activation": {
-        enabled: true,
+        enabled: true,             //是否显示
         displayName: "活跃时间",
         icon: "clock",
         unit: "小时",
         showTotal: true
       },
+      // 飞行距离
       "fzsd.module.scoreboard.display.aviating_distance": {
         enabled: false,
         displayName: "飞行距离",
@@ -218,6 +239,7 @@ export const websiteConfig = {
         unit: "米",
         showTotal: true
       },
+      // 受伤害数
       "fzsd.module.scoreboard.display.damage_taken": {
         enabled: true,
         displayName: "受伤害数",
@@ -225,6 +247,7 @@ export const websiteConfig = {
         unit: "点",
         showTotal: true
       },
+      // 死亡次数
       "fzsd.module.scoreboard.display.death_count": {
         enabled: true,
         displayName: "死亡次数",
@@ -232,6 +255,7 @@ export const websiteConfig = {
         unit: "次",
         showTotal: true
       },
+      // 挖掘数
       "fzsd.module.scoreboard.display.dig_count": {
         enabled: true,
         displayName: "方块挖掘",
@@ -239,6 +263,7 @@ export const websiteConfig = {
         unit: "个",
         showTotal: true
       },
+      // 钓鱼次数
       "fzsd.module.scoreboard.display.fishing_count": {
         enabled: true,
         displayName: "钓鱼次数",
@@ -246,6 +271,7 @@ export const websiteConfig = {
         unit: "次",
         showTotal: true
       },
+      // 击杀数
       "fzsd.module.scoreboard.display.kill_count": {
         enabled: true,
         displayName: "玩家击杀",
@@ -253,6 +279,7 @@ export const websiteConfig = {
         unit: "个",
         showTotal: true
       },
+      // 放置数
       "fzsd.module.scoreboard.display.placement_count": {
         enabled: true,
         displayName: "放置数量",
@@ -260,6 +287,7 @@ export const websiteConfig = {
         unit: "个",
         showTotal: true
       },
+      // 交易次数
       "fzsd.module.scoreboard.display.trade_count": {
         enabled: false,
         displayName: "交易次数",
@@ -268,7 +296,8 @@ export const websiteConfig = {
         showTotal: true
       }
     },
-
+    
+    // 显示设置
     display: {
       itemsPerPage: 10,
       showPlayerCount: true,
@@ -277,47 +306,53 @@ export const websiteConfig = {
     }
   },
 
-  // 服务器历程页面资源路径
+  // 历程配置
   history: {
+    // 图片文件夹路径
     imagesFolder: "/assets/history-images"
   },
 
-  // 相册页面资源路径
+  // 相册配置
   gallery: {
+    // 图片文件夹路径
     imagesFolder: "/assets/gallery-images"
   },
 
-  // 关于页面全部模块配置
+  // 关于页面配置
   about: {
+    // 关于页面板块配置
     sections: {
+      // 服务器信息板块
       serverInfo: {
         enabled: true,
         title: "服务器硬件信息",
         icon: "information",
         items: [
-          { label: "服务器类型", value: "独立物理机" },
-          { label: "CPU", value: "i9-13900KF" },
-          { label: "运行内存", value: "128GB DDR5" },
-          { label: "服务器玩法", value: "生存、生电、大型建筑" },
-          { label: "最大在线人数", value: "100人" },
-          { label: "运行状态", value: "7×24小时不间断运行" }
+          { label: "服务器类别", value: "物理机" },
+          { label: "CPU", value: "i9-13900kf" },
+          { label: "内存", value: "128GB DDR5" },
+          { label: "类型", value: "生存，生电，建筑" },
+          { label: "最大玩家", value: "100人" },
+          { label: "在线时间", value: "7X24小时" }
         ]
       },
-
+      
+      // 特色功能板块
       features: {
         enabled: true,
-        title: "服务器特色功能",
+        title: "服务器特色",
         icon: "cog",
         items: [
-          { label: "IPv4优质线路", value: "✓" },
-          { label: "IPv6双栈支持", value: "✓" },
-          { label: "线路节点镜像", value: "✓" },
-          { label: "世界数据双重备份", value: "✓" },
-          { label: "群组服互通", value: "✓" },
-          { label: "专属联机加速工具", value: "✓" }
+          { label: "IPV4网络", value: "✓" },
+          { label: "IPV6网络", value: "✓" },
+          { label: "镜像服务器", value: "✓" },
+          { label: "双重备份", value: "✓" },
+          { label: "群服互通", value: "✓" },
+          { label: "联机工具提供", value: "✓" }
         ]
       },
-
+      
+      // 管理团队板块
       team: {
         enabled: true,
         title: "管理团队",
@@ -326,77 +361,87 @@ export const websiteConfig = {
           { label: "JungleX", value: "腐竹-物理服主！" },
           { label: "JungleB", value: "腐竹-不务正业" }
         ]
-      },
-
-      rules: {
-        enabled: true,
-        title: "服务器游戏规则",
-        description: "服务器基本规则与玩家行为规范",
-        items: [
-          {
-            title: "友好共处",
-            icon: "heart",
-            description: "尊重所有玩家，禁止辱骂、骚扰、恶意拆毁他人建筑"
-          },
-          {
-            title: "严禁作弊",
-            icon: "shield",
-            description: "禁止使用外挂、作弊客户端，禁止恶意利用BUG破坏服务器平衡"
-          },
-          {
-            title: "文明公屏聊天",
-            icon: "chat",
-            description: "禁止广告、刷屏、低俗言论，保持聊天环境整洁"
-          }
-        ]
-      },
-
-      contact: {
-        enabled: true,
-        title: "加入我们社区",
-        description: "交流建筑、生电技巧，反馈服务器问题",
-        items: [
-          {
-            title: "官方QQ群",
-            subtitle: "加入群聊交流互动",
-            icon: "qqchat",
-            buttonText: "立即加群",
-            buttonType: "secondary",
-            url: "https://qm.qq.com/q/mVvrLcbLvU"
-          },
-          {
-            title: "联系邮箱",
-            subtitle: "BUG反馈、商务合作发送邮件",
-            icon: "email",
-            buttonText: "发送邮件",
-            buttonType: "secondary",
-            url: "mc@jungle.cc.cd"
-          }
-        ]
-      },
-
-      members: {
-        enabled: true,
-        title: "服主白名单成员",
-        description: "服务器核心成员名单",
-        dataSource: "localFile",
-        localFile: {
-          path: "/assets/memberlist/whitelist.json",
-          cacheTimeout: 300000
-        },
-        manualList: [
-          "JungleX"
-        ]
       }
+    },
+    
+    // 游戏规则配置
+    rules: {
+      enabled: true,
+      title: "游戏规则",
+      description: "服务器基本规则和玩家行为准则",
+      items: [
+        {
+          title: "友好相处",
+          icon: "heart",
+          description: "尊重其他玩家，禁止任何形式的骚扰和歧视行为"
+        },
+        {
+          title: "禁止作弊",
+          icon: "shield",
+          description: "严禁使用任何作弊客户端或利用游戏漏洞"
+        },
+        {
+          title: "文明聊天",
+          icon: "chat",
+          description: "保持聊天频道文明，禁止发布广告和不当内容"
+        }
+      ]
+    },
+    
+    // 联系我们配置
+    contact: {
+      enabled: true,
+      title: "联系我们",
+      description: "加入我们的社区，与我们一起畅游方块世界",
+      items: [
+        {
+          title: "QQ群",
+          subtitle: "加入官方 QQ 群交流",
+          icon: "qqchat",
+          buttonText: "加入 QQ 群",
+          buttonType: "secondary",
+          url: "https://qm.qq.com/q/mVvrLcbLvU"
+        },
+        {
+          title: "邮箱",
+          subtitle: "发送邮件联系我们",
+          icon: "email",
+          buttonText: "发送邮件",
+          buttonType: "secondary",
+          url: "mc@jungle.cc.cd"
+        }
+      ]
+    },
+    
+    // 成员列表配置
+    members: {
+      enabled: true,
+      title: "服务器成员",
+      description: "我们的服务器大家庭",
+      
+      // 数据获取方式："manual" 或 "localFile"
+      dataSource: "localFile",
+      
+      // 本地文件配置（当dataSource为"localFile"时生效）
+      localFile: {
+        path: "/assets/memberlist/whitelist.json",
+        cacheTimeout: 300000 // 5分钟缓存
+      },
+      
+      // 手动成员列表（当dataSource为"manual"时,或未获取到数据时生效）
+      manualList: [
+        "JungleX"
+      ]
     }
   },
 
-  // MDI图标统一映射表，解决组件找不到图标问题
+  // 图标配置
   icons: {
     source: "https://icones.js.org",
+    // 常用图标映射
     mappings: {
       home: "mdi-home",
-      history: "mdi-history",
+      history: "mdi-history", 
       trophy: "mdi-trophy",
       information: "mdi-information",
       music: "mdi-music",
@@ -425,44 +470,64 @@ export const websiteConfig = {
     }
   },
 
-  // 网站图标favicon配置
+  // 网页图标配置
   favicon: {
+    // 是否启用图标配置
     enabled: true,
+    // 基础favicon路径
     default: "/favicon/favicon.ico",
+    // 不同尺寸图标路径
     sizes: {
       "16x16": "/favicon/favicon-16x16.png",
       "32x32": "/favicon/favicon-32x32.png",
       "192x192": "/favicon/android-chrome-192x192.png",
       "512x512": "/favicon/android-chrome-512x512.png"
     },
+    // Apple Touch图标路径
     appleTouch: "/favicon/apple-touch-icon.png"
   }
 };
-
-// 页面路由模板定义
+//此行以下的内容无需修改，如果你不知道你在干什么请停下你要继续的想法
+// 页面配置模板
 export const pageTemplates = {
-  home: { title: "主页", description: "JungleS服务器主页", layout: "default" },
-  gallery: { title: "游戏相册", description: "服务器玩家作品截图", layout: "default" },
-  history: { title: "服务器历程", description: "服务器发展时间线", layout: "default" },
-  leaderboard: { title: "玩家排行榜", description: "FZ数据包数据统计排行", layout: "default" },
-  about: { title: "关于我们", description: "服务器详细介绍", layout: "default" }
+  home: {
+    title: "主页",
+    description: "服务器主页",
+    layout: "default"
+  },
+  gallery: {
+    title: "相册",
+    description: "服务器相册",
+    layout: "default"
+  },
+  history: {
+    title: "服务器历程", 
+    description: "服务器发展历史",
+    layout: "default"
+  },
+  leaderboard: {
+    title: "排行榜",
+    description: "玩家排行榜",
+    layout: "default"
+  },
+  about: {
+    title: "关于我们",
+    description: "服务器信息",
+    layout: "default"
+  }
 };
 
-/**
- * 动态新增页面方法
- * @param {Object} pageConfig 页面配置参数
- */
+// 添加新页面的方法
 export function addNewPage(pageConfig) {
+  // 添加到导航栏
   websiteConfig.navigation.items.push({
     name: pageConfig.name,
     path: pageConfig.path,
     icon: pageConfig.icon,
-    enabled: true,
-    external: false,
-    externalUrl: "",
-    pageTitle: pageConfig.pageTitle || {}
+    enabled: true
   });
-
+  
+  // 添加到页面模板
   pageTemplates[pageConfig.key] = {
     title: pageConfig.title,
     description: pageConfig.description,
