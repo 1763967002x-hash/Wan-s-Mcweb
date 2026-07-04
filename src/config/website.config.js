@@ -210,7 +210,6 @@ export const websiteConfig = {
     copyright: "© 2022-2026 JungleS服务器管理团队保留所有权利.",
     customHtml: `
       <!-- 在这里插入自定义HTML代码，比如备案信息 -->
-      <meta name="google-site-verification" content="8sxyZum3kBleRefSVtkpVKUcvmQCtn4LzRr0UGbzrwo" />
       <p style="text-align:center;font-size:14px;color:#555;margin:15px 0;">本站由<a href="https://www.rainyun.com" target="_blank" style="color:#007bff;text-decoration:none;">雨云</a>提供计算服务</p>
     `
   },
