@@ -3,9 +3,13 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://mc.jungles.cc.cd',
-  build:{
+  trailingSlash: 'never',
+  build: {
     format: 'file'
   },
-  trailingSlash: 'never',
-  integrations: [sitemap({exclude: ['/404']})]
+  integrations: [
+    sitemap({
+      exclude: ['/404']
+    })
+  ]
 });
