@@ -325,9 +325,8 @@ export const websiteConfig = {
         title: "管理团队",
         icon: "shield-account",
         items: [
-          { label: "_YUTONG_", value: "腐竹-物理服主！" },
-          { label: "wanwan_jiean", value: "腐竹-技术和主要管理" },
-          { label: "CrazyPastor", value: "腐竹-不务正业" }
+          { label: "JungleX", value: "腐竹-物理服主！" }
+          { label: "JungleB", value: "腐竹-不务正业" }
         ]
       }
     },
