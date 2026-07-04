@@ -82,7 +82,7 @@ export const websiteConfig = {
         name: "排行榜",
         path: "/leaderboard",
         icon: "mdi-trophy",
-        enabled: true,
+        enabled: false,
         // 外链配置：如果external为true，则点击跳转到externalUrl
         external: false, // 是否启用外链模式
         externalUrl: "", // 外链地址（仅在external为true时生效）
@@ -199,7 +199,7 @@ export const websiteConfig = {
     // 页面显示的服务器地址
     displayAddress: "mm.rainplay.cn:45454",
     // API请求使用的服务器地址（可以不同）
-    apiAddress: "ipv4.mm.rainplay.cn",
+    apiAddress: "ipv6.mm.rainplay.cn",
     port: "45454",
     version: "1.21.11",
     apiEndpoint: "https://api.mcstatus.io/v2/status/java"
