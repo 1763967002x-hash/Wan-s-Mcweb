@@ -319,17 +319,15 @@ export const websiteConfig = {
       },
 
       team: {
-        enabled: true,
-        title: "管理团队",
-        icon: "shield-account",
-        items: [
-          { label: "JungleX", value: "服主｜服务器搭建与运维" },
-          { label: "JungleB", value: "管理员｜玩法设计" }
-        ]
-      }
-    },
-
-    rules: {
+  enabled: true,
+  title: "管理团队",
+  icon: "shield-account",
+  items: [
+    { label: "JungleX", value: "腐竹-物理服主！" },
+    { label: "JungleB", value: "腐竹-不务正业" }
+  ]
+},
+rules: {
       enabled: true,
       title: "服务器游戏规则",
       description: "服务器基本规则与玩家行为规范",
