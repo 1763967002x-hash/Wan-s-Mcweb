@@ -406,9 +406,9 @@ export const websiteConfig = {
           title: "邮箱",
           subtitle: "发送邮件联系我们",
           icon: "email",
-          buttonText: "发送邮件",
+          buttonText: "发送邮件(jx@jungle.cc.cd)",
           buttonType: "secondary",
-          url: "mc@jungle.cc.cd"
+          url: "mail.qq.com"
         }
       ]
     },
