@@ -101,7 +101,7 @@ export const websiteConfig = {
         externalUrl: "",
         pageTitle: {
           mainTitle: {
-            texts: "关于服务器", "About JungleS Server",
+            texts: ["关于服务器", "About JungleS Server"],
             typewriter: {
               enabled: true,
               speed: 100,
@@ -319,73 +319,75 @@ export const websiteConfig = {
       },
 
       team: {
-  enabled: true,
-  title: "管理团队",
-  icon: "shield-account",
-  items: [
-    { label: "JungleX", value: "腐竹-物理服主！" },
-    { label: "JungleB", value: "腐竹-不务正业" }
-  ]
-},
-rules: {
-      enabled: true,
-      title: "服务器游戏规则",
-      description: "服务器基本规则与玩家行为规范",
-      items: [
-        {
-          title: "友好共处",
-          icon: "heart",
-          description: "尊重所有玩家，禁止辱骂、骚扰、恶意拆毁他人建筑"
-        },
-        {
-          title: "严禁作弊",
-          icon: "shield",
-          description: "禁止使用外挂、作弊客户端，禁止恶意利用BUG破坏服务器平衡"
-        },
-        {
-          title: "文明公屏聊天",
-          icon: "chat",
-          description: "禁止广告、刷屏、低俗言论，保持聊天环境整洁"
-        }
-      ]
-    },
-
-    contact: {
-      enabled: true,
-      title: "加入我们社区",
-      description: "交流建筑、生电技巧，反馈服务器问题",
-      items: [
-        {
-          title: "官方QQ群",
-          subtitle: "加入群聊交流互动",
-          icon: "qqchat",
-          buttonText: "立即加群",
-          buttonType: "secondary",
-          url: "https://qm.qq.com/q/mVvrLcbLvU"
-        },
-        {
-          title: "联系邮箱",
-          subtitle: "BUG反馈、商务合作发送邮件",
-          icon: "email",
-          buttonText: "发送邮件",
-          buttonType: "secondary",
-          url: "mc@jungle.cc.cd"
-        }
-      ]
-    },
-
-    members: {
-      enabled: true,
-      title: "服主白名单成员",
-      description: "服务器核心成员名单",
-      dataSource: "localFile",
-      localFile: {
-        path: "/assets/memberlist/whitelist.json",
-        cacheTimeout: 300000
+        enabled: true,
+        title: "管理团队",
+        icon: "shield-account",
+        items: [
+          { label: "JungleX", value: "腐竹-物理服主！" },
+          { label: "JungleB", value: "腐竹-不务正业" }
+        ]
       },
-      manualList: [
-        "JungleX"
-      ]
+
+      rules: {
+        enabled: true,
+        title: "服务器游戏规则",
+        description: "服务器基本规则与玩家行为规范",
+        items: [
+          {
+            title: "友好共处",
+            icon: "heart",
+            description: "尊重所有玩家，禁止辱骂、骚扰、恶意拆毁他人建筑"
+          },
+          {
+            title: "严禁作弊",
+            icon: "shield",
+            description: "禁止使用外挂、作弊客户端，禁止恶意利用BUG破坏服务器平衡"
+          },
+          {
+            title: "文明公屏聊天",
+            icon: "chat",
+            description: "禁止广告、刷屏、低俗言论，保持聊天环境整洁"
+          }
+        ]
+      },
+
+      contact: {
+        enabled: true,
+        title: "加入我们社区",
+        description: "交流建筑、生电技巧，反馈服务器问题",
+        items: [
+          {
+            title: "官方QQ群",
+            subtitle: "加入群聊交流互动",
+            icon: "qqchat",
+            buttonText: "立即加群",
+            buttonType: "secondary",
+            url: "https://qm.qq.com/q/mVvrLcbLvU"
+          },
+          {
+            title: "联系邮箱",
+            subtitle: "BUG反馈、商务合作发送邮件",
+            icon: "email",
+            buttonText: "发送邮件",
+            buttonType: "secondary",
+            url: "mc@jungle.cc.cd"
+          }
+        ]
+      },
+
+      members: {
+        enabled: true,
+        title: "服主白名单成员",
+        description: "服务器核心成员名单",
+        dataSource: "localFile",
+        localFile: {
+          path: "/assets/memberlist/whitelist.json",
+          cacheTimeout: 300000
+        },
+        manualList: [
+          "JungleX"
+        ]
+      }
     }
   },
 
