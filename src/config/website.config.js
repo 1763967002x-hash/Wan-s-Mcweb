@@ -401,7 +401,7 @@ export const websiteConfig = {
           icon: "qqchat",
           buttonText: "加入 QQ 群",
           buttonType: "secondary",
-          url: "https://qm.qq.com/q/mVvrLcbLvU"
+          url: "https://qun.qq.com/universal-share/share?ac=1&authKey=0h4IF9h0y1OM9eLxrywYLu5v%2FNOoQtj5ODl2OEmqKSOzxQylKEtkbpNcwXqrQmro&busi_data=eyJncm91cENvZGUiOiI1NDk5NDE0MjMiLCJ0b2tlbiI6IjJMMWp0c3hBWXZSMTkwN1Y3MXU2eXE3cEJNL0R6Um5qQVZCUHlraVZiL2swbFFKWXlsQ05SSHdQNjczZXd3V0QiLCJ1aW4iOiIxNzYzOTY3MDAyIn0%3D&data=u0vVLBagpSLL5ah4Mz520S5z0FtJi9rVgcdEML0ajzceRCH3lgo1Y4Pqc9tjYZG4v0fjsjPI7Xmj-cYuJFHQVw&svctype=4&tempid=h5_group_info"
         },
         {
           title: "邮箱",
