@@ -421,7 +421,7 @@ export const websiteConfig = {
       description: "我们的服务器大家庭",
       
       // 数据获取方式："manual" 或 "localFile"
-      dataSource: "localFile",
+      dataSource: "manual",
       
       // 本地文件配置（当dataSource为"localFile"时生效）
       localFile: {
